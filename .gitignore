@@ -1,0 +1,12 @@
+# Local outputs
+outputs/*
+!outputs/.gitkeep
+
+# Editor / OS noise
+.vscode/
+.idea/
+.DS_Store
+
+# Temporary files
+*.tmp
+*.log
