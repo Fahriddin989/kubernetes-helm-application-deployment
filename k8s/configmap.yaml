@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: release-api-config
+  namespace: release-api-dev
+  labels:
+    app.kubernetes.io/name: release-api
+    app.kubernetes.io/instance: release-api-dev
+data:
+  SERVICE_NAME: release-api
+  APP_VERSION: v0.1.0

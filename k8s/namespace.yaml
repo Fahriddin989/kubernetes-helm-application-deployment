@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: release-api-dev
+  labels:
+    app.kubernetes.io/name: release-api
+    app.kubernetes.io/instance: release-api-dev
