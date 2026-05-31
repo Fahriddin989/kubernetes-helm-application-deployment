@@ -2,4 +2,4 @@ replicaCount: 2
 
 env:
   SERVICE_NAME: release-api
-  APP_VERSION: v0.1.0
+  APP_VERSION: v0.2.0
