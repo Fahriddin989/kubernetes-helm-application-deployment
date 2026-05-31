@@ -2,7 +2,7 @@ replicaCount: 2
 
 image:
   repository: ghcr.io/fahriddin989/ci-cd-release-engineering-foundation
-  tag: v0.2.0
+  tag: v0.3.0
   pullPolicy: IfNotPresent
 
 service:
@@ -15,7 +15,7 @@ container:
 
 env:
   SERVICE_NAME: release-api
-  APP_VERSION: v0.2.0
+  APP_VERSION: v0.3.0
 
 probes:
   readiness:
@@ -50,6 +50,9 @@ securityContext:
     seccompProfile:
       type: RuntimeDefault
   container:
+    runAsNonRoot: true
+    runAsUser: 10001
+    runAsGroup: 10001
     allowPrivilegeEscalation: false
     capabilities:
       drop:
