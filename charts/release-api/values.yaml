@@ -36,3 +36,21 @@ resources:
   limits:
     cpu: 250m
     memory: 256Mi
+
+serviceAccount:
+  create: true
+  automountServiceAccountToken: false
+
+deployment:
+  revisionHistoryLimit: 5
+  terminationGracePeriodSeconds: 30
+
+securityContext:
+  pod:
+    seccompProfile:
+      type: RuntimeDefault
+  container:
+    allowPrivilegeEscalation: false
+    capabilities:
+      drop:
+        - ALL
