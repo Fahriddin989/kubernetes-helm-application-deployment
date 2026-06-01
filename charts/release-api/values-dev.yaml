@@ -1,7 +1,7 @@
 replicaCount: 2
 
 image:
-  tag: v0.3.0-broken-test
+  tag: v0.3.0
 
 env:
   SERVICE_NAME: release-api
