@@ -1,5 +1,8 @@
 replicaCount: 2
 
+image:
+  tag: v0.3.0-broken-test
+
 env:
   SERVICE_NAME: release-api
   APP_VERSION: v0.3.0
