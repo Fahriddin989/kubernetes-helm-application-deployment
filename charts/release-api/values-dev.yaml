@@ -1,8 +1,14 @@
 replicaCount: 2
 
 image:
-  tag: v0.3.0
+  tag: v0.4.0
 
 env:
   SERVICE_NAME: release-api
   APP_VERSION: v0.3.0
+
+serviceMonitor:
+  enabled: true
+  interval: 30s
+  path: /metrics
+  labels: {}
