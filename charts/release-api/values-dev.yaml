@@ -5,7 +5,7 @@ image:
 
 env:
   SERVICE_NAME: release-api
-  APP_VERSION: v0.3.0
+  APP_VERSION: v0.4.1
 
 serviceMonitor:
   enabled: true
