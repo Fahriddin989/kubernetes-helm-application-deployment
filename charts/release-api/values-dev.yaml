@@ -1,7 +1,7 @@
 replicaCount: 2
 
 image:
-  tag: v0.4.1
+  tag: v9.9.9-bad
 
 env:
   SERVICE_NAME: release-api
