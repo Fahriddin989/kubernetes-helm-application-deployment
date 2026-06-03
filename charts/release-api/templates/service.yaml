@@ -7,7 +7,6 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   selector:
-    incident: broken-service-selector
     {{- include "release-api.selectorLabels" . | nindent 4 }}
   ports:
     - name: http
