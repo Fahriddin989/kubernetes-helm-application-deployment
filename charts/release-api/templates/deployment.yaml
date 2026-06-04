@@ -37,6 +37,9 @@ spec:
           envFrom:
             - configMapRef:
                 name: {{ include "release-api.fullname" . }}-config
+          volumeMounts:
+            - name: tmp
+              mountPath: /tmp
           readinessProbe:
             httpGet:
               path: {{ .Values.probes.readiness.path }}
@@ -53,3 +56,6 @@ spec:
             failureThreshold: {{ .Values.probes.liveness.failureThreshold }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+        - name: tmp
+          emptyDir: {}
